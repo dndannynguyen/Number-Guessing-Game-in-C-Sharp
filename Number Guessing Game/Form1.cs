@@ -12,7 +12,7 @@ namespace Number_Guessing_Game
 
 /// <summary>
 /// Number Guessing Game Application
-/// Authors: Danny Nguyen and Moarco Poon
+/// Authors: Danny Nguyen and Marco Poon
 /// Date: January, 17, 2024
 /// Source: Code based on the tutorial at: https://www.youtube.com/watch?v=S0GPI1mGT_A
 /// Source: Support with debug at: https://stackoverflow.com/questions/3752451/enter-key-pressed-event-handler
