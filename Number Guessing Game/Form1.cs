@@ -44,30 +44,34 @@ namespace Number_Guessing_Game
         /// </summary>
         private void checkNumber(object sender, EventArgs e)
         {
-            int i = Convert.ToInt32(textBoxInputAnswer.Text);
-
-            guesses += 1;
-            labelBottom.Text = "Attempt: " + guesses;
-
-            if (i == number)
+            if (textBoxInputAnswer.Text != "")
             {
-                MessageBox.Show("You guessed it. Try another.");
-                loadQuestions();
-                textBoxInputAnswer.Text = "";
-                guesses = 0;
+                int i = Convert.ToInt32(textBoxInputAnswer.Text);
+
+                guesses += 1;
                 labelBottom.Text = "Attempt: " + guesses;
-            }
-            else if (i < number)
-            {
-                MessageBox.Show("Go Higher");
-                textBoxInputAnswer.Text = "";
-            }
-            else
-            {
-                MessageBox.Show("Go Lower");
-                textBoxInputAnswer.Text = "";
+
+                if (i == number)
+                {
+                    MessageBox.Show("You guessed it. Try another.");
+                    loadQuestions();
+                    textBoxInputAnswer.Text = "";
+                    guesses = 0;
+                    labelBottom.Text = "Attempt: " + guesses;
+                }
+                else if (i < number)
+                {
+                    MessageBox.Show("Go Higher");
+                    textBoxInputAnswer.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Go Lower");
+                    textBoxInputAnswer.Text = "";
+                }
             }
         }
+            
 
         /// <summary>
         /// Generates a new random number for the player to guess.
